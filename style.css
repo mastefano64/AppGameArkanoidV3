@@ -1,0 +1,130 @@
+#popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,32,0.45);
+  z-index: 999;
+  display: block;
+}
+/* style.css - Stili base e variabili CSS */
+:root {
+  --header-height: 10%;
+  --campodigioco-height: 75vh;
+  --footer-height: 15%;
+  --main-margin: 10px;
+  --header-bg: blue;
+  --header-fg: white;
+  --campodigioco-bg: blue;
+  --campodigioco-fg: white;
+  --footer-bg: blue;
+  --footer-fg: white;
+  --button-bg: #1565c0;
+  --button-fg: white;
+  --button-border: 2px solid white;
+  --button-hover-bg: #1976d2;
+  --popup-bg: #357ae8;
+  --racchetta-bg: white;
+}
+#html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background: var(--campodigioco-bg);
+  color: var(--campodigioco-fg);
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+#header {
+  height: var(--header-height);
+  background: var(--header-bg);
+  color: var(--header-fg);
+  margin-left: var(--main-margin);
+  margin-right: var(--main-margin);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-radius: 8px;
+}
+#campodigioco-container {
+  height: var(--campodigioco-height);
+  background: var(--campodigioco-bg);
+  margin-left: var(--main-margin);
+  margin-right: var(--main-margin);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  flex-shrink: 0;
+  padding-bottom: 8px;
+}
+#campodigioco {
+  background: var(--campodigioco-bg);
+  border: 2px solid white;
+  border-radius: 8px;
+  display: block;
+}
+#footer {
+  height: var(--footer-height);
+  background: var(--footer-bg);
+  color: var(--footer-fg);
+  margin-left: var(--main-margin);
+  margin-right: var(--main-margin);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+button {
+  background: var(--button-bg);
+  color: var(--button-fg);
+  border: var(--button-border);
+  border-radius: 6px;
+  padding: 8px 18px;
+  margin: 0 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+button:hover:not(:disabled) {
+  background: var(--button-hover-bg);
+}
+#settings-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--popup-bg);
+  color: white;
+  padding: 32px 32px 24px 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.3);
+  z-index: 1000;
+  min-width: 320px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border: 3px solid white;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.label-palle {
+  margin-top: 10px;
+  color: var(--footer-fg);
+  font-size: 1.1rem;
+}
