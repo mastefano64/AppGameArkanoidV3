@@ -1,6 +1,6 @@
 # Arkanoid WebApp
 
-Questa è una semplice webapp in stile Arkanoid realizzata con HTML, CSS, Canvas e JavaScript.
+Questa è una semplice webapp in stile Arkanoid realizzata con: HTML, CSS, Canvas e JavaScript.
 
 ## Funzionalità principali
 - Struttura a pagina singola (SPA)
