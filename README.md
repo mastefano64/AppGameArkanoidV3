@@ -2,16 +2,24 @@
 
 Questa è una semplice webapp in stile Arkanoid realizzata con: HTML, CSS, Canvas e JavaScript.
 
+![Screenshot del gioco](images/screen.png)
+
+L'applicazione è stata creata per testare "vibe-coding" e file instructions.md con GPT-4.1.
+
+[prompt-iniziale.md](prompt-iniziale.md) - [prompt-mattoncini.md](prompt-mattoncini.md)
+
+La documentazione tecnica è stata redatta da: [GPT-4.1](explain-reference1.md) - [GPT-5 mini](explain-reference2.md) - [Raptor mini](explain-reference3.md)
+
 ## Funzionalità principali
 - Struttura a pagina singola (SPA)
 - Suddivisione in più file JS secondo il principio SOLID (SRP)
 - Ogni oggetto JS è una classe
 - Gestione eventi custom tra oggetti JS
 - Layout con header, campo di gioco, footer
-- Configurazione tramite oggetto `appConfig`
 - Popup impostazioni per numero e velocità palle
-- Stato del gioco gestito tramite variabile `isRunning` (Fermo, In corso, In pausa)
+- Stato del gioco (Fermo, In corso, In pausa)
 - Racchetta controllabile da mouse e bottoni
+- Configurazione tramite oggetto `appConfig`
 - Stili CSS dinamici e personalizzabili
 
 ## Avvio locale
