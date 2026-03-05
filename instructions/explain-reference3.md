@@ -1,4 +1,4 @@
-# Documentazione Tecnica - Arkanoid JS
+# Documentazione Tecnica Completa
 
 Generata con Raptor Mini
 

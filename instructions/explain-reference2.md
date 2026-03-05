@@ -1,10 +1,10 @@
-**Overview**
+# Documentazione Tecnica Completa
 
 Generata con GPT-5 mini
 
-Questa documentazione tecnica descrive l'architettura, il comportamento runtime, gli stati, le interazioni tra le classi e l'API di riferimento dell'applicazione Arkanoid presente nella workspace. Le informazioni sono ricavate dal codice sorgente (file .js) e spiegano: variabili di stato, flag, eventi, callback, ciclo di vita degli oggetti, e come avvengono le collisioni e il calcolo punteggio.
-
 **Architettura**
+
+Questa documentazione tecnica descrive l'architettura, il comportamento runtime, gli stati, le interazioni tra le classi e l'API di riferimento dell'applicazione Arkanoid presente nella workspace. Le informazioni sono ricavate dal codice sorgente (file .js) e spiegano: variabili di stato, flag, eventi, callback, ciclo di vita degli oggetti, e come avvengono le collisioni e il calcolo punteggio.
 
 - Struttura file e oggetti
   - L'app è suddivisa in file modulati: [app.js](app.js), [header.js](header.js), [footer.js](footer.js), [campodigioco.js](campodigioco.js), [mattoncino.js](mattoncino.js), [palla.js](palla.js), [racchetta.js](racchetta.js), [settings-popup.js](settings-popup.js), [event-helper.js](event-helper.js), [appConfig.js](appConfig.js), [utils.js](utils.js).
