@@ -6,9 +6,11 @@ Questa è una semplice webapp in stile Arkanoid realizzata con: HTML, CSS, Canva
 
 L'applicazione è stata creata per testare "vibe-coding" e file instructions.md con GPT-4.1.
 
-[prompt-iniziale.md](prompt-iniziale.md) - [prompt-mattoncini.md](prompt-mattoncini.md)
+[prompt-iniziale.md](instructions/prompt-iniziale.md) - [prompt-mattoncini.md](instructions/prompt-mattoncini.md)
 
-La documentazione tecnica è stata redatta da: [GPT-4.1](explain-reference1.md) - [GPT-5 mini](explain-reference2.md) - [Raptor mini](explain-reference3.md)
+La documentazione tecnica è stata redatta da: [GPT-4.1](instructions/explain-reference1.md) - [GPT-5 mini](instructions/explain-reference2.md) - [Raptor mini](instructions/explain-reference3.md)
+
+**IMPORTANTE: Per giocare e fare in modo che la racchetta colpisca la palla il mouse deve essere all'interno del campo da gioco. Se esce dal campo da gioco puoi premere i bottoni, ma non riuscirai a controlare la racchetta.**
 
 ## Funzionalità principali
 - Struttura a pagina singola (SPA)
