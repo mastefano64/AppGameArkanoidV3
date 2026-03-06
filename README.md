@@ -1,6 +1,8 @@
 # Arkanoid WebApp
 
-Questa è una semplice webapp in stile Arkanoid realizzata con: HTML, CSS, Canvas e JavaScript.
+I più grandi forse lo ricordano bene: quando i PC non erano ancora entrati nelle nostre case e l’idea stessa di videogioco non passava necessariamente  da una tastiera, l’unico modo per immergersi in un mondo digitale era andare al bar sotto casa o nelle sale giochi. Uno dei primi giochi è stato Arkanoid e trovò il suo spazio naturale: un gioco essenziale e geniale. Una pallina che rimbalza, una racchetta con cui colpire la pallina, una parete di mattoncini da abbattere uno dopo l’altro. E proprio in quella semplicità si nascondeva qualcosa di magico, in grado di trasformare ogni partita in una piccola sfida personale.
+
+**Questa è una semplice webapp in stile Arkanoid realizzata con: HTML, CSS, Canvas e JavaScript.**
 
 ![Screenshot del gioco](images/screen.png)
 
@@ -9,6 +11,8 @@ L'applicazione è stata creata per testare "vibe-coding" e file instructions.md 
 [prompt-iniziale.md](instructions/prompt-iniziale.md) - [prompt-mattoncini.md](instructions/prompt-mattoncini.md)
 
 La documentazione tecnica è stata redatta da: [GPT-4.1](instructions/explain-reference1.md) - [GPT-5 mini](instructions/explain-reference2.md) - [Raptor mini](instructions/explain-reference3.md)
+
+👉 Per lanciare l'applicazione se è installato "Live Server", posizionarsi su index.html, tasto destro e dal menu segliere "Open with Live Server".
 
 **IMPORTANTE: Per giocare e fare in modo che la racchetta colpisca la palla il mouse deve essere all'interno del campo da gioco. Se esce dal campo da gioco puoi premere i bottoni, ma non riuscirai a controlare la racchetta.**
 
