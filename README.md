@@ -14,7 +14,7 @@ La documentazione tecnica è stata redatta da: [GPT-4.1](instructions/explain-re
 
 👉 Per lanciare l'applicazione se è installato "Live Server", posizionarsi su index.html, tasto destro e dal menu segliere "Open with Live Server".
 
-**IMPORTANTE: Per giocare e fare in modo che la racchetta colpisca la palla il mouse deve essere all'interno del campo da gioco. Se esce dal campo da gioco puoi premere i bottoni, ma non riuscirai a controlare la racchetta.**
+**IMPORTANTE: Per giocare e fare in modo che la racchetta colpisca la palla il mouse deve essere all'interno del campo da gioco. Se esce dal campo da gioco puoi premere i bottoni, ma non riuscirai a controllare la racchetta.**
 
 ## Funzionalità principali
 - Struttura a pagina singola (SPA)
