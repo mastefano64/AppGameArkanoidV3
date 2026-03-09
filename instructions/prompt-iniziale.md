@@ -3,7 +3,7 @@
 Tu sei un agente esperto nella scrittura di codice. Voglio creare un semplice gioco in stile Arkanoid con html, css, canvas, javascript. 
 Pertanto deve essere una webapp. Per provarla la puoi hostare un light web server (in vscode). Prima di scrivere il codice leggi tutto il prompt fino in fondo. Dopo aver letto tutto inizia e "procedi step by step".
 
-#Architettura
+# Architettura
 Come detto è un applicazione contenuta in unica pagina html.
 
 - Cerca di utilizzare i principi SOLID, in particolar modo il "Single Responsibility Principle (SRP)", in modo da non scrivere 
@@ -64,21 +64,19 @@ window.onload = function(e){
 - Lo sfondo dello schermo e delle singole aree deve essere blu ed i bottoni bianchi con un bordo bianco (questi valori sono mdificabili nell'oggetto appConfig). Nella forma descrittiva è stata usata l'espressione "campo di gioco” nelle proprietà invece "campodigioco", sono la stessa cosa.
 
 - Nell'header 
- -- Sulla sinistra c'è la lable che mostra il punteggio (testo e valore es. Punteggio: 40) deve essere sempre visibile. Il valore del 
-puntenggio viene azzerato ogni volta che avvio una nuova sessione di gioco. Quando il gioco finisce il punteggio rimane visibile.
- -- In centro c'è una lable che mostra: "Gioca" o "GameOver!". "GameOver!" compare quando il gioco finisce. "Gioca" compare la prima volta
-che avvio il gioco o quando avvio una nuova sessione di gioco. 
+ -- Sulla sinistra c'è la lable che mostra il punteggio (testo e valore es. Punteggio: 40) deve essere sempre visibile. Il valore del puntenggio viene azzerato ogni volta che avvio una nuova sessione di gioco. Quando il gioco finisce il punteggio rimane visibile.
+ -- In centro c'è una lable che mostra: "Gioca" o "GameOver!". "GameOver!" compare quando il gioco finisce. "Gioca" compare la prima volta che avvio il gioco o quando avvio una nuova sessione di gioco. 
  -- Sulla destra c'è il un bottone "Setting" che apre un popup in cui si confgurano le impostazioni di gioco. Questo bottone è abilitato solo quando il gioco è "Fermo". Quando il gioco "In corso" o "In pausa" il pulsante "Setting" sarà disabilitato.
 
 - Campo da gioco
-- Nella forma descrittiva è stata usata l'espressione "campo di gioco” nelle proprietà invece "campodigioco", sono la stessa cosa.
-- Un campo gioco è formato da un piccoli rettangoli (le palle) che rimbalzano contro la parete superiore e le pareti laterali laterali, le palle vengono colpite da una racchetta (un rettangolo) che viene fatta muovere attraverso il mouse. Oltre che dal mouse la racchetta viene anche fatta nuovere anche da 2 bottoni situati nell'area adibita ai controlli utente. 
-- E' possibile giocare con 1 o n. palle. Il numero di palle con cui è possibile giocare conteporaneamente viene impostato/modificato nel popup "Setting". Quando si avvia il gioco viene preso il valore di default.
-- E' possibile impostare la velocità della palla con un valore che va da 1 o n. viene impostato/modificato nel popup "Setting". Quando si avvia il gioco viene preso il valore di default.
-- La racchetta è posizionata nella parte inferiore del campo di gioco, dimensione e colore della racchetta (un rettangolo) sono in appConfig: racchettaWidth: "20%", racchettaHeight: "20px", racchettaBackground: "white". Di default è imposta una larghezza racchetta pari al 20% della larghezza del campo da gioco. La racchetta compare quando il gioco viene avviato, scompare quando il gioco termina.
-- Se una palla esce dal campo viene rimossa; il gioco termina quando non ci sono più palle. E' anche possibile terminare una sessione di gioco premendo il bottone "Stop" (anche se ci sono ancora palle), ed questo caso il gioco verrà fermato. In entrambi i casi lo stato da "In corso" o "in Pausa" diventerà "Fermo".
-- Se il gioco è nello stato "Fermo" la racchetta non si vede, Si vede solo se lo stato è "In corso" o "in Pausa".
-- Maggiori informazioni in: "Stati del gioco e bottoni (abilitati / disabilitati)".
+ -- Nella forma descrittiva è stata usata l'espressione "campo di gioco” nelle proprietà invece "campodigioco", sono la stessa cosa.
+ -- Un campo gioco è formato da un piccoli rettangoli (le palle) che rimbalzano contro la parete superiore e le pareti laterali laterali, le palle vengono colpite da una racchetta (un rettangolo) che viene fatta muovere attraverso il mouse. Oltre che dal mouse la racchetta viene anche fatta nuovere anche da 2 bottoni situati nell'area adibita ai controlli utente. 
+ -- E' possibile giocare con 1 o n. palle. Il numero di palle con cui è possibile giocare conteporaneamente viene impostato/modificato nel popup "Setting". Quando si avvia il gioco viene preso il valore di default.
+ -- E' possibile impostare la velocità della palla con un valore che va da 1 o n. viene impostato/modificato nel popup "Setting". Quando si avvia il gioco viene preso il valore di default.
+ -- La racchetta è posizionata nella parte inferiore del campo di gioco, dimensione e colore della racchetta (un rettangolo) sono in appConfig: racchettaWidth: "20%", racchettaHeight: "20px", racchettaBackground: "white". Di default è imposta una larghezza racchetta pari al 20% della larghezza del campo da gioco. La racchetta compare quando il gioco viene avviato, scompare quando il gioco termina.
+ -- Se una palla esce dal campo viene rimossa; il gioco termina quando non ci sono più palle. E' anche possibile terminare una sessione di gioco premendo il bottone "Stop" (anche se ci sono ancora palle), ed questo caso il gioco verrà fermato. In entrambi i casi lo stato da "In corso" o "in Pausa" diventerà "Fermo".
+ -- Se il gioco è nello stato "Fermo" la racchetta non si vede, Si vede solo se lo stato è "In corso" o "in Pausa".
+ -- Maggiori informazioni in: "Stati del gioco e bottoni (abilitati / disabilitati)".
 
 - Nell'footer 
  -- C'è un area adibita ai controlli utente e ci sono i seguenti bottoni:
