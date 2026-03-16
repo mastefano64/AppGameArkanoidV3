@@ -16,8 +16,71 @@ class App {
     this.nPalle = appConfig.numeroPalleDefault;
     this.velocitaPalle = appConfig.velocitaPalleDefault;
     this.palle = [];
+    // Splash Screen
+    this.splashBackdrop = document.getElementById('splash-backdrop');
+    this.splashScreen = document.getElementById('splash-screen');
+    this.splashCloseBtn = document.getElementById('splash-close-btn');
+    this._initSplashScreen();
     this._initComponents();
     this._bindEvents();
+  }
+
+  _initSplashScreen() {
+    // Applica dimensioni e colori da appConfig
+    if (this.splashScreen) {
+      this.splashScreen.style.minWidth = this.appConfig.splashWidth + 'px';
+      this.splashScreen.style.minHeight = this.appConfig.splashHeight + 'px';
+      this.splashScreen.style.background = this.appConfig.splashBg;
+    }
+    if (this.splashBackdrop) {
+      this.splashBackdrop.style.background = this.appConfig.splashBackdrop;
+    }
+    if (this.splashCloseBtn) {
+      this.splashCloseBtn.style.background = this.appConfig.splashBtnBg;
+      this.splashCloseBtn.style.color = this.appConfig.splashBtnFg;
+      this.splashCloseBtn.onmouseover = () => {
+        this.splashCloseBtn.style.background = this.appConfig.splashBtnHoverBg;
+      };
+      this.splashCloseBtn.onmouseout = () => {
+        this.splashCloseBtn.style.background = this.appConfig.splashBtnBg;
+      };
+      this.splashCloseBtn.onclick = () => this.hideSplashScreen();
+    }
+    // Mostra Splash Screen all'avvio
+    this.showSplashScreen();
+  }
+
+  showSplashScreen() {
+    if (this.splashBackdrop) this.splashBackdrop.style.display = 'block';
+    if (this.splashScreen) this.splashScreen.style.display = 'flex';
+    // Blocca tab focus sugli altri bottoni
+    this._disableAllButtonsExceptSplash();
+  }
+
+  hideSplashScreen() {
+    if (this.splashBackdrop) this.splashBackdrop.style.display = 'none';
+    if (this.splashScreen) this.splashScreen.style.display = 'none';
+    this._enableAllButtons();
+  }
+
+  _disableAllButtonsExceptSplash() {
+    // Disabilita tutti i bottoni tranne quello dello splash
+    this._disabledButtons = [];
+    const allBtns = document.querySelectorAll('button');
+    allBtns.forEach(btn => {
+      if (btn.id !== 'splash-close-btn' && !btn.disabled) {
+        btn.disabled = true;
+        this._disabledButtons.push(btn);
+      }
+    });
+  }
+
+  _enableAllButtons() {
+    // Riabilita i bottoni disabilitati
+    if (this._disabledButtons) {
+      this._disabledButtons.forEach(btn => btn.disabled = false);
+      this._disabledButtons = [];
+    }
   }
   _initComponents() {
     this.header = new Header(this.appConfig, this.eventHelper);

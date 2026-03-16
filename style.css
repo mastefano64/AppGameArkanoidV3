@@ -1,3 +1,8 @@
+#splash-screen a {
+  color: #fff !important;
+  text-decoration: underline !important;
+  font-size: 1.13em;
+}
 #popup-overlay {
   position: fixed;
   top: 0;
@@ -25,6 +30,77 @@
   --button-border: 2px solid white;
   --button-hover-bg: #1976d2;
   --popup-bg: #357ae8;
+  --splash-bg: #102040;
+  --splash-btn-bg: #1976d2;
+  --splash-btn-fg: #fff;
+  --splash-btn-hover-bg: #1565c0;
+  --splash-backdrop: rgba(10,20,40,0.65);
+  --splash-z: 2000;
+  #splash-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--splash-backdrop);
+    z-index: var(--splash-z);
+    display: none;
+  }
+
+  #splash-screen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--splash-bg);
+    color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 40px rgba(0,0,0,0.4);
+    border: 3px solid #fff;
+    z-index: calc(var(--splash-z) + 1);
+    min-width: 340px;
+    min-height: 200px;
+    max-width: 90vw;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 28px 18px 28px;
+    text-align: center;
+  }
+
+  #splash-content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 18px;
+  }
+
+  #splash-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+  }
+
+  #splash-close-btn {
+    background: var(--splash-btn-bg);
+    color: var(--splash-btn-fg);
+    border: 2px solid #fff;
+    border-radius: 8px;
+    padding: 10px 32px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+  }
+  #splash-close-btn:hover {
+    background: var(--splash-btn-hover-bg);
+  }
   --racchetta-bg: white;
 }
 #html, body {
